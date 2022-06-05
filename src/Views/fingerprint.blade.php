@@ -1,9 +1,5 @@
 <script>
-    @if(isset($fingerprint) && $fingerprint)
-    let fingerprint = '{{ $fingerprint }}';
-    @else
-    let fingerprint = '';
-    @endif
+    let fingerprint = '{{ \Session::get('fingerprint') }}';
 
     if (!fingerprint) {
         // Initialize the agent at application startup.

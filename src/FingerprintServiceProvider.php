@@ -29,8 +29,7 @@ class FingerprintServiceProvider extends ServiceProvider
 	 */
 	protected function bootDirective() : void {
 		Blade::directive('fingerprint', function() {
-			$fingerprint = \Session::get('fingerprint');
-			return "<?php echo view('fingerprint::fingerprint', ['session' => '$fingerprint'])->render(); ?>";
+			return "<?php echo view('fingerprint::fingerprint')->render(); ?>";
 		});
 	}
 
